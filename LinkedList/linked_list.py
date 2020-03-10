@@ -20,3 +20,7 @@ class MyLinkedList:
 myList = MyLinkedList()
 myList.add(2)
 myList.add(3)
+myList.add(4)
+myList.add(3)
+myList.add(7)
+
