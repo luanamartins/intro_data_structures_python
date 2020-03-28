@@ -10,13 +10,13 @@ class MyStack:
     def push(self, value):
         newNode = Node(value)
         
-        if (self.top):
+        if self.top:
             newNode.next = self.top
         
         self.top = newNode
 
     def pop(self):
-        if (self.top):
+        if self.top:
             toRemove = self.top.data
             self.top = self.top.next
             return toRemove
@@ -25,7 +25,7 @@ class MyStack:
     
     def print(self):
         current = self.top
-        while (current):
+        while current:
             print(current.data)
             current = current.next
 

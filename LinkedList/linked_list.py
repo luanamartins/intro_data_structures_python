@@ -8,9 +8,9 @@ class MyLinkedList:
         self.head = None
 
     def add(self, value):
-        if(self.head):
+        if self.head:
             current = self.head
-            while(current.next):
+            while current.next:
                 current = current.next
             current.next = Node(value)
         else:

@@ -9,7 +9,7 @@ class MyQueue:
         self.tail = self.head
 
     def enqueue(self, value):
-        if (self.head): # queue is not empty
+        if self.head: # queue is not empty
             newNode = Node(value)
             self.tail.next = newNode
             self.tail = newNode 
@@ -18,7 +18,7 @@ class MyQueue:
             self.tail = self.head
     
     def dequeue(self):
-        if (self.head):
+        if self.head:
             toRemove = self.head.data
             self.head = self.head.next
             return toRemove
@@ -27,7 +27,7 @@ class MyQueue:
     
     def print(self):
         current = self.head
-        while(current):
+        while current:
             print(current.data)
             current = current.next
         
