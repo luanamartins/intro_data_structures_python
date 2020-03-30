@@ -1,8 +1,3 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
-
 class Tree:
     def __init__(self, data):
         self.data = data
@@ -22,19 +17,37 @@ class Tree:
             else:
                 self.right.add(value)
 
+    # Depth First Search
     def dfs(self):
         result = [self.data]
 
-        if (self.left):
+        if self.left:
             result.extend(self.left.dfs())
         
-        if (self.right):
+        if self.right:
             result.extend(self.right.dfs())
 
         return result
 
+    # Breadth First Search
+    def bfs(self):
+        result = []
+        queue = [self]
+        while len(queue) > 0:
+            current = queue.pop(0)
+            result.append(current.data)
+
+            if current.left:
+                queue.append(current.left)
+            
+            if current.right:
+                queue.append(current.right)
+        
+        return result
+
 
 tree = Tree(5)
-tree.add(10)
 tree.add(1)
-print(tree.dfs())
+tree.add(8)
+tree.add(10)
+print(tree.bfs())
