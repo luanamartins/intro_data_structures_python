@@ -1,2 +1,8 @@
-# intro_data_structures_python
-Examples of data structures in Python
+# Introduction to Data Structures in Python
+
+## List of data structures:
+- LinkedList
+- Queue
+- Stack
+- Tree
+- ...
